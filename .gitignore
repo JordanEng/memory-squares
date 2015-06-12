@@ -1,3 +1,9 @@
+# Java
+*.class
+
+# jGRASP
+*.gpj
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
