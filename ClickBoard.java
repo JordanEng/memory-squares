@@ -14,6 +14,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
+// This class is everything pertaining to the clickable gameplay board
 public class ClickBoard {
    
    private int size;
@@ -21,12 +22,14 @@ public class ClickBoard {
    ArrayList buttons = new ArrayList<JButton>();
    ArrayList correctButtons = new ArrayList<Integer>();
    
+   // Constructor for the clickable board
    public ClickBoard(int size, ArrayList<Integer> list){
       this.size=size;
       dimension=size*100;
       correctButtons = list;
    } 
    
+   // Generates a black board of buttons which the user is able to click.
    public void createFrame(){
       
       JFrame frame = new JFrame();
