@@ -14,22 +14,14 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
-// This class assigns actions to the buttons, so they chagne when pressed 
 public class CustomButtonListener implements ActionListener{
 
-   //JButton button;
    ArrayList<Integer> list;
    JFrame frame;
    String value;
    ArrayList<Integer> list2;
    
-<<<<<<< HEAD
    public CustomButtonListener(ArrayList<Integer> list, JFrame frame) {
-=======
-   // Declares variables
-   public CustomButtonListener(JButton button, ArrayList<Integer> list, JFrame frame) {
-      this.button = button;
->>>>>>> origin/master
       this.list = list;
       this.frame = frame;
       list2 = new ArrayList<Integer>();
@@ -38,8 +30,6 @@ public class CustomButtonListener implements ActionListener{
       }
    }
    
-   // The button turns red when the person gets it right.
-   // It turns black and ends the program when the person gets it wrong
    public void actionPerformed(ActionEvent event){
       value = event.getActionCommand();
       JButton button = (JButton)event.getSource();
