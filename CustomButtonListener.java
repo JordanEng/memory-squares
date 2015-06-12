@@ -14,6 +14,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
+// This class implements ActionListener to allow for 
+// different acitons when our buttons are clicked
 public class CustomButtonListener implements ActionListener{
 
    ArrayList<Integer> list;
@@ -21,6 +23,8 @@ public class CustomButtonListener implements ActionListener{
    String value;
    ArrayList<Integer> list2;
    
+   // Constructor that takes in the correct ArrayList, the button frame
+   // and creates an ArrayList to store the users clicks
    public CustomButtonListener(ArrayList<Integer> list, JFrame frame) {
       this.list = list;
       this.frame = frame;
@@ -30,6 +34,10 @@ public class CustomButtonListener implements ActionListener{
       }
    }
    
+   // Changes the colors of the buttons depending on which one is clicked by using
+   // the ArrayList to determine. If an incorrect button is clicked, the game ends.
+   // Also, it compares the ArrayLists of the user and the randomly generated one
+   // to determine when the user has won the game.
    public void actionPerformed(ActionEvent event){
       value = event.getActionCommand();
       JButton button = (JButton)event.getSource();
