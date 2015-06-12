@@ -36,14 +36,14 @@ public class ClickBoard {
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setSize(new Dimension(dimension,dimension));
       frame.setLayout(new GridLayout(size,size));
+      CustomButtonListener b1 = new CustomButtonListener(correctButtons, frame);
 
       for (int i=1; i<=size*size; i++){
          JButton temp = new JButton();
-         temp.setActionCommand(correctButtons.get(i - 1) + "");
-         buttons.add(temp);
-         frame.add(temp);
-         CustomButtonListener b1 = new CustomButtonListener(temp, correctButtons, frame);
+         temp.setActionCommand(correctButtons.get(i - 1) + " " + (i-1));
          temp.addActionListener(b1);
+         //buttons.add(temp);
+         frame.add(temp);
       }
       frame.setVisible(true); 
    }
