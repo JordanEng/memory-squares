@@ -2,7 +2,7 @@
  * BoardFilled.java
  * Assignment: Final Project - Memory Squares
  * Purpose: The final project is an opportunity to 
- * pull together all the things we’ve learned this year 
+ * pull together all the things weï¿½ve learned this year 
  * and to learn new skills to create our own project.
  *
  * @version 06/12/15
@@ -58,7 +58,7 @@ public class BoardFilled{
    }
    
    
-   // Retruns an ArrayList of the squares in the grid,
+   // Returns an ArrayList of the squares in the grid,
    // the colored ones as 1, and the uncolored ones as 0.
    public ArrayList returnBoxes(){
       return redSquares;

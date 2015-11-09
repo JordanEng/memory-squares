@@ -2,7 +2,7 @@
  * ClickBoard.java
  * Assignment: Final Project - Memory Squares
  * Purpose: The final project is an opportunity to 
- * pull together all the things we’ve learned this year 
+ * pull together all the things we've learned this year
  * and to learn new skills to create our own project.
  *
  * @version 06/12/15
@@ -42,7 +42,6 @@ public class ClickBoard {
          JButton temp = new JButton();
          temp.setActionCommand(correctButtons.get(i - 1) + " " + (i-1));
          temp.addActionListener(b1);
-         //buttons.add(temp);
          frame.add(temp);
       }
       frame.setVisible(true); 
