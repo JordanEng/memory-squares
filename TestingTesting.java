@@ -2,18 +2,17 @@
  * TestingTesting.java
  * Assignment: Final Project - Memory Squares
  * Purpose: The final project is an opportunity to 
- * pull together all the things we�ve learned this year 
+ * pull together all the things we've learned this year
  * and to learn new skills to create our own project.
  *
- * @version 06/12/15
- * @author Jordan Eng, Kim Rupp
+ * @version 11/9/15
+ * @author Jordan Eng
  */
 
 import java.awt.*;
 import javax.swing.*;
 import java.util.*;
 import java.io.Console;
-
 
 // This class is the client class that runs the program
 // as it creates the boards and the 
@@ -29,12 +28,14 @@ public class TestingTesting{
        Thread.sleep(2000);
        System.out.println("");
        System.out.println("Good Luck!");
-       System.out.println("");
        Thread.sleep(2000);
 
+       while(true) {
+           System.out.println();
            System.out.print("Input the size of your board (2-10): ");
            size = console.nextInt();
            System.out.println("You have " + size + " seconds. Get ready...");
+           System.out.println();
            Thread.sleep(2000);
 
            BoardFilled board1 = new BoardFilled(size);
@@ -43,5 +44,19 @@ public class TestingTesting{
 
            ClickBoard board2 = new ClickBoard(size, lengthGrid);
            board2.createFrame();
+
+           try {
+               Thread.sleep(10000);
+               System.out.println();
+               System.out.println("Do you want to play again? Yes or no?");
+               String choice = console.next();
+               if(choice.equalsIgnoreCase("no")){
+                   return;
+               }
+           } catch (InterruptedException e) {
+               return;
+           }
+           return;
+       }
    }
 }

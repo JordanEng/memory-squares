@@ -5,8 +5,8 @@
  * pull together all the things we've learned this year
  * and to learn new skills to create our own project.
  *
- * @version 06/12/15
- * @author Jordan Eng, Kim Rupp
+ * @version 11/9/15
+ * @author Jordan Eng
  */
  
 import java.awt.*;
@@ -22,7 +22,7 @@ public class CustomButtonListener implements ActionListener{
    JFrame frame;
    String value;
    ArrayList<Integer> list2;
-   boolean outcome = true;
+   static boolean outcome = true;
    
    // Constructor that takes in the correct ArrayList, the button frame
    // and creates an ArrayList to store the users clicks
@@ -49,6 +49,7 @@ public class CustomButtonListener implements ActionListener{
          button.setBackground(Color.RED);
       } else {
          button.setBackground(Color.BLACK);
+
          System.out.println("You Lost");
          frame.dispose();
       }
@@ -59,9 +60,7 @@ public class CustomButtonListener implements ActionListener{
 
        if (list.equals(list2)) {
            System.out.println("You Won");
-
            frame.dispose();
        }
    }
-
 }

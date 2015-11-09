@@ -2,11 +2,11 @@
  * BoardFilled.java
  * Assignment: Final Project - Memory Squares
  * Purpose: The final project is an opportunity to 
- * pull together all the things we�ve learned this year 
+ * pull together all the things we've learned this year
  * and to learn new skills to create our own project.
  *
- * @version 06/12/15
- * @author Jordan Eng, Kim Rupp
+ * @version 11/9/15
+ * @author Jordan Eng
  */
  
 import java.awt.*;
