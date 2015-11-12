@@ -17,20 +17,20 @@ import java.io.Console;
 // This class is the client class that runs the program
 // as it creates the boards and the 
 public class TestingTesting{
-   public static void main(String[] args) throws InterruptedException{
-      Scanner console = new Scanner(System.in);
-      int size = 0;
+   public static void main(String[] args) throws InterruptedException {
+       Scanner console = new Scanner(System.in);
+       int size = 0;
 
        System.out.println("Welcome to Memory Squares!");
        Thread.sleep(2000);
        System.out.println("In this game, you need to remember the placement");
-       System.out.println("of the red squares and try to get rid of them.");
+       System.out.println("of the red squares and replicate the pattern.");
        Thread.sleep(2000);
        System.out.println("");
        System.out.println("Good Luck!");
        Thread.sleep(2000);
 
-       while(true) {
+       while (true) {
            System.out.println();
            System.out.print("Input the size of your board (2-10): ");
            size = console.nextInt();
@@ -44,19 +44,19 @@ public class TestingTesting{
 
            ClickBoard board2 = new ClickBoard(size, lengthGrid);
            board2.createFrame();
-
-           try {
-               Thread.sleep(10000);
-               System.out.println();
-               System.out.println("Do you want to play again? Yes or no?");
-               String choice = console.next();
-               if(choice.equalsIgnoreCase("no")){
-                   return;
-               }
-           } catch (InterruptedException e) {
-               return;
-           }
-           return;
        }
    }
+
+   // Asks the user if they want to play again
+   public static boolean playAgain() throws InterruptedException{
+       Scanner console = new Scanner(System.in);
+
+       System.out.println();
+       System.out.print("Do you want to play again? \"yes\" or \"no\"?: ");
+       String choice = console.next();
+       if(choice.equalsIgnoreCase("no")){
+           return false;
+       }
+       return true;
+    }
 }

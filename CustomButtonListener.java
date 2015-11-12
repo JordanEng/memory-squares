@@ -23,7 +23,7 @@ public class CustomButtonListener implements ActionListener{
    String value;
    ArrayList<Integer> list2;
    static boolean outcome = true;
-   
+
    // Constructor that takes in the correct ArrayList, the button frame
    // and creates an ArrayList to store the users clicks
    public CustomButtonListener(ArrayList<Integer> list, JFrame frame) {
@@ -52,6 +52,13 @@ public class CustomButtonListener implements ActionListener{
 
          System.out.println("You Lost");
          frame.dispose();
+          try {
+              if (!TestingTesting.playAgain()){
+                 System.exit(0);
+              }
+          } catch (InterruptedException e) {
+              return;
+          }
       }
 
        int i = Integer.parseInt(s[1]);
@@ -61,6 +68,12 @@ public class CustomButtonListener implements ActionListener{
        if (list.equals(list2)) {
            System.out.println("You Won");
            frame.dispose();
+           try {
+               if (!TestingTesting.playAgain()){
+                  System.exit(0);
+               }
+           } catch (InterruptedException e) {
+           }
        }
    }
 }
