@@ -21,8 +21,8 @@ public class ClickBoard {
    private int dimension;
    ArrayList buttons = new ArrayList<JButton>();
    ArrayList correctButtons = new ArrayList<Integer>();
-   
-   // Constructor for the clickable board
+
+    // Constructor for the clickable board
    public ClickBoard(int size, ArrayList<Integer> list){
       this.size=size;
       dimension=size*100;
@@ -44,6 +44,6 @@ public class ClickBoard {
          temp.addActionListener(b1);
          frame.add(temp);
       }
-      frame.setVisible(true); 
+      frame.setVisible(true);
    }
 }
