@@ -57,7 +57,6 @@ public class CustomButtonListener implements ActionListener{
                  System.exit(0);
               }
           } catch (InterruptedException e) {
-              return;
           }
       }
 

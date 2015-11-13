@@ -14,7 +14,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
-// This class is everything pertaining to the clickable gameplay board
+// This class is everything pertaining to the clickable board
 public class ClickBoard {
    
    private int size;
@@ -24,8 +24,8 @@ public class ClickBoard {
 
     // Constructor for the clickable board
    public ClickBoard(int size, ArrayList<Integer> list){
-      this.size=size;
-      dimension=size*100;
+      this.size = size;
+      dimension = size * 100;
       correctButtons = list;
    } 
    
@@ -38,9 +38,9 @@ public class ClickBoard {
       frame.setLayout(new GridLayout(size,size));
       CustomButtonListener b1 = new CustomButtonListener(correctButtons, frame);
 
-      for (int i=1; i<=size*size; i++){
+      for (int i = 1; i <= size * size; i++){
          JButton temp = new JButton();
-         temp.setActionCommand(correctButtons.get(i - 1) + " " + (i-1));
+         temp.setActionCommand(correctButtons.get(i - 1) + " " + (i - 1));
          temp.addActionListener(b1);
          frame.add(temp);
       }
