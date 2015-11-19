@@ -50,7 +50,7 @@ public class CustomButtonListener implements ActionListener{
       } else {
          button.setBackground(Color.BLACK);
 
-         System.out.println("You Lost");
+         JOptionPane.showMessageDialog(null, "You Lost");
          frame.dispose();
           try {
               if (!TestingTesting.playAgain()){
@@ -65,7 +65,7 @@ public class CustomButtonListener implements ActionListener{
        list2.set(i, j);
 
        if (list.equals(list2)) {
-           System.out.println("You Won");
+           JOptionPane.showMessageDialog(null, "You Won");
            frame.dispose();
            try {
                if (!TestingTesting.playAgain()){

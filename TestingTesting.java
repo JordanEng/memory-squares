@@ -44,10 +44,7 @@ public class TestingTesting{
    public static boolean playAgain() throws InterruptedException{
        Scanner console = new Scanner(System.in);
 
-       System.out.println();
-       System.out.print("Do you want to play again? \"yes\" or \"no\"?: ");
-       String choice = console.next();
-       System.out.println();
+       String choice = JOptionPane.showInputDialog("Do you want to play again? \"yes\" or \"no\"?: ");
        if(choice.equalsIgnoreCase("no")){
            return false;
        }
